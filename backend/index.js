@@ -47,7 +47,7 @@ app.post("/add-product", async (req, resp) => {
     resp.send(result);
 });
 
-app.get("/products", async (req, resp) => {
+app.get("/", async (req, resp) => {
     const products = await Product.find();
     if (products.length > 0) {
         resp.send(products)
